@@ -1,0 +1,11 @@
+<div class="page-area">
+  <h2>Home</h2>
+  <p>This is the Home</p>
+  <div class="products">
+    <ng-container *ngIf = "statusOnline">
+      <div  *ngFor= "let product of products">
+        {{product.name }}
+      </div>
+    </ng-container>
+  </div>
+</div>

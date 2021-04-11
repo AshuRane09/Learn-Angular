@@ -1,0 +1,19 @@
+.blue {
+  color: blue;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.center {
+  text-align: center;
+}
+
+.border {
+  border: 2px solid black;
+}
+
+.font {
+  font-size: 80px;
+}

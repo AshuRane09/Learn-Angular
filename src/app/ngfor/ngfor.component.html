@@ -1,0 +1,13 @@
+<form>
+  <div>
+    <input type="text" #uname [placeholder]="placeH">
+  </div>
+  <br>
+  <button (click)="createUser(uname)" class="btn btn-success">Create User</button>
+  <button (click)="removeLast()" class="btn btn-danger" style="margin-left: 10px">remove</button>
+</form>
+
+<div *ngFor="let user of users; index as i" style="margin-top: 20px">
+  {{ user.name }}
+  <button class="btn btn-danger" (click)="removeUser(i)" style="margin-left: 30px">remove</button>
+</div>
