@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -26,6 +26,8 @@ import { CardComponent } from './routes/contact/card/card.component';
 import { ParentComponent } from './routes/parent/parent.component';
 import { ChildComponent } from './routes/parent/child/child.component';
 import {HttpClientModule} from '@angular/common/http';
+import { TemplateformComponent } from './templateform/templateform.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -34,6 +36,8 @@ const appRoutes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: 'contact', component: ContactComponent},
   {path: 'buy-products', component: ParentComponent},
+  {path: 'template', component: TemplateformComponent},
+  {path: 'reactive', component: ReactiveformComponent},
   { path: 'products', component: ProductComponent, children: [
       {path : 'laptop', component: LaptopComponent},
       {path: 'mobile', component: MobileComponent}
@@ -62,10 +66,13 @@ const appRoutes: Routes = [
     CardComponent,
     ParentComponent,
     ChildComponent,
+    TemplateformComponent,
+    ReactiveformComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     BsDatepickerModule.forRoot(),
     CarouselModule.forRoot(),
